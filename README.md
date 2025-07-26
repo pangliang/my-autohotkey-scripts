@@ -1,1 +1,1 @@
-# windows-desktop-switcher
+# my-autohotkey-scripts
