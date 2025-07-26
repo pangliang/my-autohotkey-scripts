@@ -1,3 +1,5 @@
+#Requires AutoHotkey v2.0
+
 ; AutoHotkey v2 script
 SetWorkingDir(A_ScriptDir)
 
@@ -119,5 +121,5 @@ ToggleApp(exeName, launchPath, moveToCurrentDesktop:=false) {
     }
 }
 
-#Include %A_ScriptDir%\user_config.ah2
+#Include %A_ScriptDir%\user_config.ahk
 
