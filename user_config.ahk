@@ -12,12 +12,14 @@
 !3::GoToDesktopNumber(2)
 !4::GoToDesktopNumber(3)
 
-!q::ToggleApp("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
-!`::ToggleApp("WindowsTerminal.exe", "C:\Program Files\WindowsApps\Microsoft.WindowsTerminalPreview_1.23.11752.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe", true)
-!e::ToggleApp("Code.exe", "C:\Program Files\Microsoft VS Code\Code.exe")
+!q::ToggleApp("chrome.exe", "C:\Program Files\Google\Chrome\Application\chrome.exe")
+!`::ToggleApp("WindowsTerminal.exe", "C:\Users\550017897\sdk\terminal-1.23.11752.0\WindowsTerminal.exe", true)
+!e::ToggleApp("Code.exe", "C:\Users\550017897\AppData\Local\Programs\Microsoft VS Code\Code.exe")
+!t::ToggleApp("ms-teams.exe", "C:\Program Files\WindowsApps\MSTeams_25185.410.3812.8024_x64__8wekyb3d8bbwe\ms-teams.exe")
 
 SetCapsLockState "AlwaysOff"
-*CapsLock::return
+SetStoreCapsLockMode False
+CapsLock::return
 CapsLock & a::Send("{Left}")
 CapsLock & d::Send("{Right}")
 CapsLock & w::Send("{Up}")
@@ -27,6 +29,5 @@ CapsLock & `;::Send("{End}")
 CapsLock & q::Send("{PgUp}")
 CapsLock & e::Send("{PgDn}")
 
-::sfz::450105198305192013
-
-
+; >!CapsLock::Send("{CapsLock}")
+>!CapsLock::SetCapsLockState !GetKeyState("CapsLock", "T")
